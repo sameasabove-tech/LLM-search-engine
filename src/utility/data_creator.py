@@ -13,9 +13,9 @@ def link_to_content(link : str) -> bs4.BeautifulSoup:
         bs4.BeautifulSoup: _description_
     """
     doc = requests.get(link)
-    content_soup = bs4.BeautifulSoup(doc.content, 'html5lib')
+    content_soup = bs4.BeautifulSoup(doc.content, 'html.parser')
     return content_soup
 
-def content_to_paragraphs(soup : bs4.BeautifulSoup) -> list[str]:
+def content_to_paragraphs(soup : bs4.BeautifulSoup, min_str_len: int ) -> list[str]:
     paragraph_list = [p.get_text().replace('\n', '') for p in soup.find_all("p") if len(p.get_text()) > 300]
     return paragraph_list
