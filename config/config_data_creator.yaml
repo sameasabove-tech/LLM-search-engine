@@ -1,0 +1,11 @@
+# MODEL CONFIG
+
+data:
+    wiki: true
+    topics:
+      - mathematics
+      - chemistry
+      - biology
+      - law
+      - physics
+    min_str_len: 500
