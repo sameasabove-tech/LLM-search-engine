@@ -163,3 +163,4 @@ cython_debug/
 **/.DS_Store
 src/test_main-david.py
 src/david-test_data
+src/david-test_data_2
